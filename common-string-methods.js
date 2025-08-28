@@ -26,8 +26,65 @@ Total: $20.50
 Extract the customer name.
 Split the order into an array of items.
 Convert the total price to uppercase (e.g., "TOTAL: $20.50").
+*/
+//PRACTICE PROBLEM #1
+//Activity 1
+let string = "Learning JavaScript is fun!";
+let containsJavaScript = string.includes("JavaScript");
+let funPosition = string.indexOf("fun");
 
+console.log("ACTIVITY 1 RESULTS:");
+console.log("Contains JavaScript:", containsJavaScript);
+console.log("Position of 'fun': ", funPosition);
 
+//Activity 2
+let originalString = " CODE BOOTCAMP ";
+let transformedString = originalString.toLowerCase().trim();
+let finalString = transformedString.replace("bootcamp", "JavaScript");
+
+console.log("ACTIVITY 2 RESULTS:");
+console.log("Original: ", originalString);
+console.log("Transformed:", transformedString);
+console.log("Final:",finalString);
+
+//Activity 3
+let sentence = "Coding is fun and educational";
+let sentenceArray = sentence.split(" ");
+
+console.log("ACTIVITY 3 RESULTS:")
+console.log("Original Sentence:", sentence);
+console.log("Words array:", sentenceArray);
+
+//Activity 4
+let word = "Bootcamp"
+let firstLetter = word.charAt(0);
+let extraction = word.slice(4);
+
+console.log("ACTIVITY 4 RESULTS:");
+console.log("Original word:", word);
+console.log("First Character:", firstLetter);
+console.log("Extraction of 'camp':", extraction);
+
+//Advanced Challenge
+let customerData = `Customer: John Doe
+Order: Apple, Banana, Grape
+Total: $20.50`;
+
+let customerLine = customerData.split("\n")[0];
+let customerName = customerLine.split(": ")[1];
+
+let orderLine = customerData.split("\n")[1];
+let orderItems = orderLine.split(": ")[1].split(", ");
+
+let totalLine = customerData.split("\n")[2];
+let uppercaseTotal = totalLine.toUpperCase();
+
+console.log("ADVANCED CHALLENGE RESULTS:");
+console.log("Customer Name:", customerName);
+console.log("Items in order:", orderItems);
+console.log("Uppercase Total:", uppercaseTotal);
+
+/*
 Practice Problem #2
 
 Objective
@@ -69,23 +126,23 @@ Complete the following tasks and assign the results to the specified variables. 
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
 // 1. Searching
-let hasJavaScript; // Your code here
-let codingPosition; // Your code here
-let startsWithWelcome; // Your code here
-let endsWithToday; // Your code here
+let hasJavaScript = inputString.includes("JavaScript");
+let codingPosition = inputString.indexOf("Coding");
+let startsWithWelcome = inputString.startsWith("Welcome");
+let endsWithToday = inputString.endsWith("today.");
 
 // 2. Transforming
-let lowercaseString; // Your code here
-let uppercaseString; // Your code here
-let trimmedString; // Your code here
-let replacedString; // Your code here
+let lowercaseString = inputString.toLowerCase();
+let uppercaseString = inputString.toUpperCase();
+let trimmedString = inputString.trim();
+let replacedString = inputString.replace("JavaScript", "coding");
 
 // 3. Breaking Apart
-let wordsArray; // Your code here
+let wordsArray = inputString.split(" ");
 
 // 4. Retrieving
-let firstCharacter; // Your code here
-let extractedBootcamp; // Your code here
+let firstCharacter = trimmedString.charAt(0);
+let extractedBootcamp = trimmedString.slice(22,30);
 
 // Log all results
 console.log({
